@@ -2,7 +2,7 @@
 #' @description realiza los test
 #' @param x modelo de regresion
 #' @return outputs con test de hipotesis
-#' @export normalHist
+#' @export TestRegresion
 #' @examples
 #' u=rnorm(1000,100,12)
 #' normalHist(u);
@@ -21,4 +21,5 @@ TestRegresion = function(x){
     texto = c("Valor P normalidad","Valor P homocedasticidad", "FALSE")
     test2 = cbind(test,texto)
     return(test2)
+
 }
