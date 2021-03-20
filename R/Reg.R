@@ -10,10 +10,10 @@ test.regresion <- function(x){
     test = c(normalidad, homocedas, VIF)
     for (i in 1:length(VIF)){
         if (i > 6){
-            return(FALSE)
+            viff = "estan correlacionadas"
         }
     }
-    texto = c("Valor P normalidad","Valor P homocedasticidad", "FALSE")
+    texto = c("Valor P normalidad","Valor P homocedasticidad", viff)
     test2 = cbind(test,texto)
     return(test2)
 
