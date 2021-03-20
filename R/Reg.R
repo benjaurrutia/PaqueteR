@@ -3,7 +3,7 @@
 #' @param x modelo de regresion
 #' @return outputs con test de hipotesis
 #' @export test.regresion
-test.regresion <- function(x){
+test.regresion = function(x){
     normalidad = shapiro.test(x$residuals)
     homocedas = lmtest::bptest(x)
     VIF = car::vif(x)
