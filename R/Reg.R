@@ -2,13 +2,8 @@
 #' @description realiza los test
 #' @param x modelo de regresion
 #' @return outputs con test de hipotesis
-#' @export TestRegresion
-#' @examples
-#' u=rnorm(1000,100,12)
-#' normalHist(u);
-#' normalHist(u,dens=TRUE)
-#' normalHist(u,dens=TRUE,col="lightcyan")
-TestRegresion = function(x){
+#' @export test.regresion
+test.regresion = function(x){
     normalidad = shapiro.test(x$residuals)
     homocedas = lmtest::bptest(x)
     VIF = car::vif(x)
